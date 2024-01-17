@@ -15,6 +15,7 @@ function eleccion(jugada) {
         resultado = "Tijera ✂️"
     } else {
         resultado = "MAL ELEGIDO"
+        
     }
     return resultado
 }
@@ -27,6 +28,9 @@ perdidas = 0;
 while (triunfos < 3 && perdidas < 3) {
 pc = aleatorio(1,3)
 jugador = prompt("Elije: 1 para Piedra 2 para Papel y 3 para Tijera");
+if(jugador>=4){
+    alert("Numero incorrecto por favor ingresa un numero del 1 al 3")
+}
 alert("Tu eliges: " + eleccion(jugador))
 alert("PC elige: " + eleccion(pc))
 
@@ -42,3 +46,21 @@ if (jugador == pc) {
 }
 }
 alert(`Ganaste ${triunfos} veces Perdiste ${perdidas} veces`)
+
+
+    // switch (jugada) {
+    // case jugada == 1:
+    //     resultado = "Piedra 🪨"
+    // break
+    // case jugada == 2:
+
+    //     resultado = "Papel 📄"
+    //     break
+    // case jugada == 3:
+    // resultado = "Tijera ✂️"
+    // break
+    // default:
+    // resultado = "MAL ELEGIDO"
+    // break
+    // }
+ 
